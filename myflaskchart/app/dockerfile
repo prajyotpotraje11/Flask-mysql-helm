@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY app.py .
+RUN pip install --no-cache-dir flask mysql-connector-python
+EXPOSE 5000
+ENV FLASK_PORT=5000 MYSQL_HOST=mysql MYSQL_USER=admin MYSQL_PASSWORD=admin MYSQL_DB=mydb
+CMD ["python", "app.py"]
+

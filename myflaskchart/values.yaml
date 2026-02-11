@@ -1,0 +1,14 @@
+flask:
+  image: "jotaro02/flaskapp:latest"
+  replicas: 1
+  port: 5000
+  project: "mysql"
+
+mysql:
+  image: "mysql:latest"
+  port: 3306
+  rootPassword: "admin"
+  database: "mydb"
+  user: "admin"
+  password: "admin"
+
